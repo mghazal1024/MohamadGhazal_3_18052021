@@ -10,6 +10,83 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <div class="logo-container">
+                <img class="logo-container__logo" src="/images/ohmyfood@2x.svg" alt="Oh My Food logo"/>
+            </div>
+        </header>
+
+        <section class="hero">
+            <form class="hero__form">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" placeholder="Paris, Bellevile" />
+            </form>
+
+            <div class="hero__intro">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurant d'exeption, séléctionnés par nos soins.</p>
+                <button class="hero__button">Explorer nos restaurants</button>
+            </div>
+        </section>
+
+        <section class="fonction">
+            <ul class="fonction__list">
+                <li class="fonction__list-item">
+                    <p class="fonction__number">1</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <p class="fonction__titre">Choisissez un restaurant</p>
+                </li>
+                <li class="fonction__list-item">
+                    <p class="fonction__number">2</p>
+                    <i class="fas fa-list-ul"></i>
+                    <p class="fonction__titre">Composez votre menu</p>
+                </li>
+                <li class="fonction__list-item">
+                    <p class="fonction__number">3</p>
+                    <i class="fas fa-store"></i>
+                    <p class="fonction__titre">Dégustez au restaurant</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="restaurants-cards">
+            <ul class="restaurants-cards__list">
+                <li class="restaurants-cards__list-item">
+                    <button class="heart-button">
+                        <i class="far fa-heart heart-button__icon"></i>
+                    </button>
+                    <div class="restaurants-cards__content">
+                        <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du gout"/>
+                        <div class="restaurants-cards__info">
+                            <p class="restaurants-cards__text"><strong>La palette du gout</strong></p>
+                            <p class="restaurants-cards__text">Ménilmontant</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <div class="logo-container">
+                <img class="logo-container__logo logo-container__logo--white logo-container__logo--small" src="/images/ohmyfood@2x.svg" alt="Oh My Food logo"/>
+            </div>
+            <ul class="footer-nav">
+                <li class="footer-nav__list-item">
+                    <i class="fas fa-utensils"></i>
+                    <a>Proposer un restaurant</a>
+                </li>
+                <li class="footer-nav__list-item">
+                    <i class="fas fa-hands-helping"></i>
+                    <a>Devenir partenaire</a>
+                </li>
+                <li>
+                    <a>Mentions légales</a>
+                </li>
+                <li>
+                    <a>Contact</a>
+                </li>
+            </ul>
+        </footer>
         
         
         <script src="https://kit.fontawesome.com/b0c25fa6dd.js" crossorigin="anonymous"></script>
