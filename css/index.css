@@ -1,1 +1,121 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+/*--------COLORS-------------*/
+/*--------TYPOGRAPHY-----------*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+/*--HEADER----------------------------*/
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 22px 0 12px 0;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+header .logo-container {
+  max-width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo-container img {
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+}
+
+.hero .hero__form {
+  width: 100%;
+  background-color: #EAEAEA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .hero__form i {
+  color: #353535;
+}
+
+.hero .hero__form input {
+  background-color: transparent;
+  border: 0;
+  padding: 15px 20px;
+}
+
+.hero .hero__intro {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
+  background-color: #F6F6F6;
+}
+
+.hero .hero__intro h1, .hero .hero__intro h2 {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.hero .hero__intro .hero__button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  border: 0;
+  color: white;
+  height: 50px;
+  padding: 0 25px;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+/*# sourceMappingURL=index.css.map */

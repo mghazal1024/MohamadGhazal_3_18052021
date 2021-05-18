@@ -1,0 +1,87 @@
+@import 'variables';
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+h1, h2 {
+    font-family: $police-body;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    font-weight: 500;
+}
+h2 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+}
+
+/*--HEADER----------------------------*/
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 22px 0 12px 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    .logo-container {
+        max-width: 170px;
+        display: flex;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    .hero__form {
+        width: 100%;
+        // padding: 15px 0;
+        background-color: $brand-gris;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            color: $brand-black;
+        }
+        input {
+            background-color: transparent;
+            border: 0;
+            padding: 15px 20px;
+        }
+    }
+    .hero__intro {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 50px;
+        background-color: $brand-gris-clair;
+        h1, h2 {
+            padding-bottom: 15px;
+            text-align: center;
+        }
+        .hero__button {
+           background: linear-gradient($secondaire-color, $primaire-color);
+           font-family: $police-body;
+           font-weight: 300;
+           font-size: 1rem;
+           border: 0;
+           color: white;
+           height: 50px;
+           padding: 0 25px;
+           border-radius: 25px;
+           box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+    }
+}
