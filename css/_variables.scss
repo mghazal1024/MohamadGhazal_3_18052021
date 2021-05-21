@@ -4,7 +4,10 @@ $primaire-color: #9356DC;
 $secondaire-color: #FF79DA;
 $tertiaire-color: #99E2D0;
 
+$primaire-color-clair: #F5EDFF;
+
 $brand-black: #353535;
+$brand-gris-fonce: #7E7E7E;
 $brand-gris: #EAEAEA;
 $brand-gris-clair: #F6F6F6;
 
@@ -13,3 +16,8 @@ $brand-gris-clair: #F6F6F6;
 
 $police-titre: 'Shrikhand', cursive;
 $police-body: 'Roboto', sans-serif;
+
+
+/*--------ANIMATION-----------------*/
+
+$basic-transition: ease-in-out 300ms;

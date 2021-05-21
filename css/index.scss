@@ -8,24 +8,31 @@
 }
 
 
-h1, h2, p {
+h1, h2, h3, p {
     font-family: $police-body;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.7rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 h2 {
     font-size: 1.1rem;
     font-weight: 300;
-    line-height: 1.6rem;
+    line-height: 1.4rem;
 }
 
-p {
+p, .restaurants-cards__text {
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.4rem;
 }
 
+.restaurants-cards__text {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    strong {
+        font-weight: 600;
+    }
+}
 /*--HEADER----------------------------*/
 
 header {
@@ -45,6 +52,9 @@ header {
     }
 }
 
+
+/*--HERO----------------------------*/
+
 .hero {
     width: 100%;
     display: flex;
@@ -54,6 +64,7 @@ header {
         width: 100%;
         // padding: 15px 0;
         background-color: $brand-gris;
+        mix-blend-mode: multiply;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -63,7 +74,7 @@ header {
         input {
             background-color: transparent;
             border: 0;
-            padding: 15px 20px;
+            padding: 20px;
         }
     }
     .hero__intro {
@@ -71,7 +82,7 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 50px 45px;
+        padding: 45px;
         background-color: $brand-gris-clair;
         h1, h2 {
             padding-bottom: 15px;
@@ -80,7 +91,7 @@ header {
         .hero__button {
            background: linear-gradient($secondaire-color, $primaire-color);
            font-family: $police-body;
-           font-weight: 300;
+           font-weight: 500;
            font-size: 1rem;
            border: 0;
            color: white;
@@ -92,6 +103,9 @@ header {
         }
     }
 }
+
+
+/*--FONCTIONNEMENT----------------------------*/
 
 .fonction {
     display: flex;
@@ -113,6 +127,9 @@ header {
             align-items: center;
             justify-content: flex-start;
             padding: 0 35px;
+            margin-top: 20px;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+            transition: $basic-transition;
             .fonction__number {
                 position: absolute;
                 top: 50%;
@@ -126,6 +143,104 @@ header {
                 background-color: $primaire-color;
                 border-radius: 12px;
                 transform: translate(-50%, -50%);
+            }
+            i {
+                color: $brand-gris-fonce;
+                font-size: 19px;
+                transition: $basic-transition;
+            }
+            .fonction__titre {
+                margin-left: 20px;
+                font-weight: 500;
+            }
+        }
+        .fonction__list-item:hover {
+            background-color: $primaire-color-clair;
+        }
+        .fonction__list-item:hover i {
+            color: $primaire-color;
+        }
+    }
+}
+
+
+
+/*--RESTAURANTS----------------------------*/
+
+.restaurants-cards {
+    background-color: $brand-gris-clair;
+    padding: 50px 20px;
+    .restaurants-cards__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        .restaurants-cards__list-item {
+            width: 100%;
+            // height: 250px;
+            position: relative;
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            .heart-button {
+                position: absolute;
+                z-index: 10;
+                width: 75px;
+                height: 75px;
+                bottom: 0;
+                right: 0;
+                background-color: transparent;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                i.heart-button__icon {
+                    font-size: 22px;
+                    // background-color: red;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 1;
+                    transition: $basic-transition;
+                }
+                i.heart-button__icon--on-hover {
+                    position: absolute;
+                    font-size: 22px;
+                    background: linear-gradient($secondaire-color, $primaire-color);
+                    color: transparent;
+                    background-clip: text;
+                    opacity: 0;
+                    transition: $basic-transition;
+                }
+            }
+            .heart-button:hover i.heart-button__icon {
+                opacity: 0;
+            }
+            .heart-button:hover i.heart-button__icon--on-hover {
+                opacity: 1;
+            }
+            .restaurants-cards__content {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                // background-color: white;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 175px;
+                    object-fit: cover;
+                    object-position: bottom;
+                }
+            }
+            .restaurants-cards__info {
+                background-color: white;
+                height: 75px;
+                display: flex;
+                flex-direction: column;
+                padding: 0 15px;
+                justify-content: center;
             }
         }
     }

@@ -1,5 +1,6 @@
 /*--------COLORS-------------*/
 /*--------TYPOGRAPHY-----------*/
+/*--------ANIMATION-----------------*/
 * {
   padding: 0;
   margin: 0;
@@ -7,23 +8,32 @@
           box-sizing: border-box;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.7rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 1.1rem;
   font-weight: 300;
-  line-height: 1.6rem;
+  line-height: 1.4rem;
 }
 
-p {
+p, .restaurants-cards__text {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.4rem;
+}
+
+.restaurants-cards__text {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.restaurants-cards__text strong {
+  font-weight: 600;
 }
 
 /*--HEADER----------------------------*/
@@ -55,6 +65,7 @@ header .logo-container img {
   width: 100%;
 }
 
+/*--HERO----------------------------*/
 .hero {
   width: 100%;
   display: -webkit-box;
@@ -70,6 +81,7 @@ header .logo-container img {
 .hero .hero__form {
   width: 100%;
   background-color: #EAEAEA;
+  mix-blend-mode: multiply;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,7 +100,7 @@ header .logo-container img {
 .hero .hero__form input {
   background-color: transparent;
   border: 0;
-  padding: 15px 20px;
+  padding: 20px;
 }
 
 .hero .hero__intro {
@@ -101,7 +113,7 @@ header .logo-container img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px 45px;
+  padding: 45px;
   background-color: #F6F6F6;
 }
 
@@ -114,7 +126,7 @@ header .logo-container img {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1rem;
   border: 0;
   color: white;
@@ -126,6 +138,7 @@ header .logo-container img {
   margin-top: 15px;
 }
 
+/*--FONCTIONNEMENT----------------------------*/
 .fonction {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,6 +181,11 @@ header .logo-container img {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 0 35px;
+  margin-top: 20px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
 }
 
 .fonction .fonction__list .fonction__list-item .fonction__number {
@@ -190,5 +208,144 @@ header .logo-container img {
   border-radius: 12px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.fonction .fonction__list .fonction__list-item i {
+  color: #7E7E7E;
+  font-size: 19px;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+.fonction .fonction__list .fonction__list-item .fonction__titre {
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.fonction .fonction__list .fonction__list-item:hover {
+  background-color: #F5EDFF;
+}
+
+.fonction .fonction__list .fonction__list-item:hover i {
+  color: #9356DC;
+}
+
+/*--RESTAURANTS----------------------------*/
+.restaurants-cards {
+  background-color: #F6F6F6;
+  padding: 50px 20px;
+}
+
+.restaurants-cards .restaurants-cards__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+}
+
+.restaurants-cards .restaurants-cards__list .restaurants-cards__list-item {
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurants-cards .restaurants-cards__list .restaurants-cards__list-item .heart-button {
+  position: absolute;
+  z-index: 10;
+  width: 75px;
+  height: 75px;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.restaurants-cards .restaurants-cards__list .restaurants-cards__list-item .heart-button i.heart-button__icon {
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+.restaurants-cards .restaurants-cards__list .restaurants-cards__list-item .heart-button i.heart-button__icon--on-hover {
+  position: absolute;
+  font-size: 22px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
+  background-clip: text;
+  opacity: 0;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+.restaurants-cards .restaurants-cards__list .restaurants-cards__list-item .heart-button:hover i.heart-button__icon {
+  opacity: 0;
+}
+
+.restaurants-cards .restaurants-cards__list .restaurants-cards__list-item .heart-button:hover i.heart-button__icon--on-hover {
+  opacity: 1;
+}
+
+.restaurants-cards .restaurants-cards__list .restaurants-cards__list-item .restaurants-cards__content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.restaurants-cards .restaurants-cards__list .restaurants-cards__list-item .restaurants-cards__content img {
+  display: block;
+  width: 100%;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.restaurants-cards .restaurants-cards__list .restaurants-cards__list-item .restaurants-cards__info {
+  background-color: white;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=index.css.map */
