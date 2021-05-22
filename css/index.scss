@@ -7,24 +7,34 @@
     box-sizing: border-box;
 }
 
-
-h1, h2, h3, p {
+%typography {
     font-family: $police-body;
-    font-size: 1.4rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 300;
+}
+
+h1, h3 {
+    @extend %typography;
+    font-size: 1.5rem;
     line-height: 1.7rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 h2 {
+    @extend %typography;
     font-size: 1.1rem;
     font-weight: 300;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
 }
 
-p, .restaurants-cards__text {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.4rem;
+p, a {
+    @extend %typography;
 }
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 
 .restaurants-cards__text {
     font-size: 1.1rem;
@@ -51,10 +61,14 @@ header {
     img {
         width: 100%;
     }
+    &--small {
+        max-width: 100px;
+        img {
+            width: 100%;
+        }
+    }
 }
-.logo-container--white {
-    color: white;
-}
+
 
 
 /*--HERO----------------------------*/
@@ -66,18 +80,33 @@ header {
     padding: 0;
     &__form {
         width: 100%;
+        // height: 50px;
         background-color: $brand-gris;
         mix-blend-mode: multiply;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: baseline;
         i {
             color: $brand-black;
+            height: 100%;
+            font-size: 1.1rem;
         }
         input {
             background-color: transparent;
+            height: 50px;
             border: 0;
-            padding: 20px;
+            padding: 0 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $brand-black;
+            &::placeholder {
+                display: flex;
+                align-items: center;
+                font-size: 1rem;
+                font-weight: 600;
+                color: $brand-black;
+                opacity: 1;
+            }
         }
     }
     &__intro {
@@ -154,6 +183,7 @@ header {
         background-color: $primaire-color;
         border-radius: 12px;
         transform: translate(-50%, -50%);
+        font-size: 0.9rem;
     }
     i {
         color: $brand-gris-fonce;
@@ -257,5 +287,21 @@ header {
 
 footer {
     background-color: $brand-black;
-    padding: 20px;
+    padding: 30px 20px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    &__list-item {
+        width: 100%;
+        color: white;
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+        i {
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+    }
 }
