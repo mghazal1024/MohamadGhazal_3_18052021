@@ -3,6 +3,79 @@
 /*--------ANIMATION-----------------*/
 /*---------MIXIN-----------------------*/
 /*----LOADER-------------------------*/
+@-webkit-keyframes loader-animation {
+  0% {
+    opacity: 1;
+    z-index: 20;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loader-animation {
+  0% {
+    opacity: 1;
+    z-index: 20;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes loader-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: loader-animation 300ms ease-in-out 1.5s 1 both;
+          animation: loader-animation 300ms ease-in-out 1.5s 1 both;
+}
+
+.loader__ring {
+  border: 5px solid #F5EDFF;
+  /* Light grey */
+  border-top: 5px solid #9356DC;
+  /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: loader-ring 2s linear infinite;
+          animation: loader-ring 2s linear infinite;
+}
+
 /*--HERO----------------------------*/
 .hero {
   width: 100%;
