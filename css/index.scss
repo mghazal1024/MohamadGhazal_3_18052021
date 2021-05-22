@@ -41,15 +41,19 @@ header {
     justify-content: center;
     padding: 22px 0 12px 0;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    .logo-container {
-        max-width: 170px;
-        display: flex;
-        align-items: center;
-        img {
-            width: 100%;
-        }
+    @include box-shadow;
+}
+
+.logo-container {
+    max-width: 170px;
+    display: flex;
+    align-items: center;
+    img {
+        width: 100%;
     }
+}
+.logo-container--white {
+    color: white;
 }
 
 
@@ -60,9 +64,8 @@ header {
     display: flex;
     flex-direction: column;
     padding: 0;
-    .hero__form {
+    &__form {
         width: 100%;
-        // padding: 15px 0;
         background-color: $brand-gris;
         mix-blend-mode: multiply;
         display: flex;
@@ -77,7 +80,7 @@ header {
             padding: 20px;
         }
     }
-    .hero__intro {
+    &__intro {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -88,20 +91,20 @@ header {
             padding-bottom: 15px;
             text-align: center;
         }
-        .hero__button {
-           background: linear-gradient($secondaire-color, $primaire-color);
-           font-family: $police-body;
-           font-weight: 500;
-           font-size: 1rem;
-           border: 0;
-           color: white;
-           height: 50px;
-           padding: 0 25px;
-           border-radius: 25px;
-           box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-           margin-top: 15px;
-        }
     }
+    &__button {
+        background: linear-gradient($secondaire-color, $primaire-color);
+        font-family: $police-body;
+        font-weight: 500;
+        font-size: 1rem;
+        border: 0;
+        color: white;
+        height: 50px;
+        padding: 0 25px;
+        border-radius: 25px;
+        @include box-shadow
+        margin-top: 15px;
+     }
 }
 
 
@@ -112,12 +115,12 @@ header {
     flex-direction: column;
     width: 100%;
     padding: 50px 20px;
-    .fonction__list {
+    &__list {
         list-style: none;
         display: flex;
         flex-direction: column;
         align-items: center;
-        .fonction__list-item {
+        &-item {
             width: calc(100% - 12px);
             display: flex;
             position: relative;
@@ -128,38 +131,38 @@ header {
             justify-content: flex-start;
             padding: 0 35px;
             margin-top: 20px;
-            box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+            @include box-shadow
             transition: $basic-transition;
-            .fonction__number {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                width: 24px;
-                height: 24px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                background-color: $primaire-color;
-                border-radius: 12px;
-                transform: translate(-50%, -50%);
-            }
-            i {
-                color: $brand-gris-fonce;
-                font-size: 19px;
-                transition: $basic-transition;
-            }
-            .fonction__titre {
-                margin-left: 20px;
-                font-weight: 500;
+            &:hover {
+                background-color: $primaire-color-clair;
+                i {
+                    color: $primaire-color;
+                }
             }
         }
-        .fonction__list-item:hover {
-            background-color: $primaire-color-clair;
-        }
-        .fonction__list-item:hover i {
-            color: $primaire-color;
-        }
+    }
+    &__number {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: $primaire-color;
+        border-radius: 12px;
+        transform: translate(-50%, -50%);
+    }
+    i {
+        color: $brand-gris-fonce;
+        font-size: 19px;
+        transition: $basic-transition;
+    }
+    &__titre {
+        margin-left: 20px;
+        font-weight: 500;
     }
 }
 
@@ -170,78 +173,89 @@ header {
 .restaurants-cards {
     background-color: $brand-gris-clair;
     padding: 50px 20px;
-    .restaurants-cards__list {
+    &__list {
         width: 100%;
         display: flex;
         flex-direction: column;
         list-style: none;
-        .restaurants-cards__list-item {
+        &-item {
             width: 100%;
             // height: 250px;
             position: relative;
-            border-radius: 20px;
+            border-radius: 15px;
             display: flex;
             overflow: hidden;
             box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            .heart-button {
-                position: absolute;
-                z-index: 10;
-                width: 75px;
-                height: 75px;
-                bottom: 0;
-                right: 0;
-                background-color: transparent;
-                border: none;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                i.heart-button__icon {
-                    font-size: 22px;
-                    // background-color: red;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    opacity: 1;
-                    transition: $basic-transition;
-                }
-                i.heart-button__icon--on-hover {
-                    position: absolute;
-                    font-size: 22px;
-                    background: linear-gradient($secondaire-color, $primaire-color);
-                    color: transparent;
-                    background-clip: text;
-                    opacity: 0;
-                    transition: $basic-transition;
-                }
-            }
-            .heart-button:hover i.heart-button__icon {
-                opacity: 0;
-            }
-            .heart-button:hover i.heart-button__icon--on-hover {
-                opacity: 1;
-            }
-            .restaurants-cards__content {
-                width: 100%;
-                height: 100%;
-                position: relative;
-                // background-color: white;
-                img {
-                    display: block;
-                    width: 100%;
-                    height: 175px;
-                    object-fit: cover;
-                    object-position: bottom;
-                }
-            }
-            .restaurants-cards__info {
-                background-color: white;
-                height: 75px;
-                display: flex;
-                flex-direction: column;
-                padding: 0 15px;
-                justify-content: center;
-            }
+            margin-top: 20px;
         }
     }
+    &__content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        // background-color: white;
+        img {
+            display: block;
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__info {
+        background-color: white;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+        justify-content: center;
+    }
+}
+
+.heart-button {
+    position: absolute;
+    z-index: 10;
+    width: 75px;
+    height: 75px;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &__icon {
+        font-size: 22px;
+        // background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: $basic-transition;
+        &--on-hover {
+            position: absolute;
+            font-size: 22px;
+            background: linear-gradient($secondaire-color, $primaire-color);
+            color: transparent;
+            @include background-clip(text);
+            opacity: 0;
+            transition: $basic-transition;
+        }
+    }
+    &:hover {
+        .heart-button__icon {
+            opacity: 0;
+        }
+        .heart-button__icon--on-hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+footer {
+    background-color: $brand-black;
+    padding: 20px;
 }

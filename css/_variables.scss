@@ -21,3 +21,16 @@ $police-body: 'Roboto', sans-serif;
 /*--------ANIMATION-----------------*/
 
 $basic-transition: ease-in-out 300ms;
+
+
+/*---------MIXIN-----------------------*/
+
+@mixin box-shadow {
+    box-shadow: 0 5px 8px rgba($brand-black,0.1);
+}
+
+@mixin background-clip($clip-type) {
+    -moz-background-clip: $clip-type;
+    -webkit-background-clip: $clip-type;
+    background-clip: $clip-type;
+}
