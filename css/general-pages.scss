@@ -201,3 +201,30 @@
         }
     }
 }
+
+
+
+@media screen and (min-width: 768px) {
+
+    .hero {
+        display: flex;
+        justify-content: center;
+        &__image {
+            height: 500px;
+            img {
+                height: 100%;
+            }
+        }
+        .restaurant__heading {
+            width: 50%;
+            padding: 0 50px;
+        }
+    }
+    .restaurant-menu {
+        &__list {
+            width: 50%;
+            padding: 0 50px;
+        }
+    }
+
+}
