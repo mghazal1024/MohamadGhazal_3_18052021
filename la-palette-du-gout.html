@@ -6,30 +6,174 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/header-footer.css">
+        <link rel="stylesheet" href="css/general-styles.css">
         <link rel="stylesheet" href="css/general-pages.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
+            <a class="back-btn" href="index.html"><i class="fas fa-arrow-left"></i></a>
             <div class="logo-container">
                 <img src="/images/ohmyfood@2x.svg" alt="Oh My Food logo"/>
             </div>
         </header>
 
         <section class="hero">
-            <form class="hero__form">
-                <i class="fas fa-map-marker-alt"></i>
-                <input type="text" placeholder="Paris, Bellevile" />
-            </form>
-
-            <div class="hero__intro">
-                <h1>Réservez le menu qui vous convient</h1>
-                <h2>Découvrez des restaurant d'exeption, séléctionnés par nos soins.</h2>
-                <button class="hero__button">Explorer nos restaurants</button>
+            <div class="hero__image">
+                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du gout restaurant" />
+            </div>
+            <div class="restaurant__heading">
+                <button class="heart-button">
+                    <i class="far fa-heart heart-button__icon"></i>
+                    <i class="fas fa-heart heart-button__icon--on-hover"></i>
+                </button>
+                <h1 class="restaurant__titre">La palette du gout</h1>
             </div>
         </section>
 
+        <section class="restaurant-menu">
+            <h2 class="restaurant-menu__category">Entrées</h2>
+            <ul class="restaurant-menu__list">
+                <li class="restaurant-menu__list-item">
+                    <p class="restaurant-menu__title"><strong>Fricassée d'escargot</strong></p>
+                    <div class="restaurant-menu__content">
+                        <p class="restaurant-menu__description">
+                            Au pimet d'espelette
+                        </p>
+                        <p class="restaurant-menu__price">
+                            25€
+                        </p>
+                    </div>
+                    <div class="restaurant-menu__checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </li>
+                <li class="restaurant-menu__list-item">
+                    <p class="restaurant-menu__title"><strong>Foie gras de canard mi-cuit</strong></p>
+                    <div class="restaurant-menu__content">
+                        <p class="restaurant-menu__description">
+                            Et ses copeaux de truffe noire
+                        </p>
+                        <p class="restaurant-menu__price">
+                            35€
+                        </p>
+                    </div>
+                    <div class="restaurant-menu__checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </li>
+                <li class="restaurant-menu__list-item">
+                    <p class="restaurant-menu__title"><strong>Oeuf au plat</strong></p>
+                    <div class="restaurant-menu__content">
+                        <p class="restaurant-menu__description">
+                            Assaisonné à la truffe sur lit de caviar
+                        </p>
+                        <p class="restaurant-menu__price">
+                            20€
+                        </p>
+                    </div>
+                    <div class="restaurant-menu__checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </li>
+            <!-- </ul> -->
+
+            <h2 class="restaurant-menu__category restaurant-menu__category--top-space">Plats</h2>
+            <!-- <ul class="restaurant-menu__list"> -->
+                <li class="restaurant-menu__list-item">
+                    <p class="restaurant-menu__title"><strong>Filet de boeuf aux herbes</strong></p>
+                    <div class="restaurant-menu__content">
+                        <p class="restaurant-menu__description">
+                            Accompagné de sa ribambelle de légumes
+                        </p>
+                        <p class="restaurant-menu__price">
+                            40€
+                        </p>
+                    </div>
+                    <div class="restaurant-menu__checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </li>
+                <li class="restaurant-menu__list-item">
+                    <p class="restaurant-menu__title"><strong>Parmentier de queue de boeuf</strong></p>
+                    <div class="restaurant-menu__content">
+                        <p class="restaurant-menu__description">
+                            À la truffe noire sur sa purée de panais
+                        </p>
+                        <p class="restaurant-menu__price">
+                            35€
+                        </p>
+                    </div>
+                    <div class="restaurant-menu__checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </li>
+                <li class="restaurant-menu__list-item">
+                    <p class="restaurant-menu__title"><strong>Filet de turbot</strong></p>
+                    <div class="restaurant-menu__content">
+                        <p class="restaurant-menu__description">
+                            Aux agrumes
+                        </p>
+                        <p class="restaurant-menu__price">
+                            44€
+                        </p>
+                    </div>
+                    <div class="restaurant-menu__checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </li>
+            <!-- </ul> -->
+
+            <h2 class="restaurant-menu__category restaurant-menu__category--top-space">Desserts</h2>
+            <!-- <ul class="restaurant-menu__list"></ul> -->
+                <li class="restaurant-menu__list-item">
+                    <p class="restaurant-menu__title"><strong>Paris-Brest</strong></p>
+                    <div class="restaurant-menu__content">
+                        <p class="restaurant-menu__description">
+                            Revisité
+                        </p>
+                        <p class="restaurant-menu__price">
+                            18€
+                        </p>
+                    </div>
+                    <div class="restaurant-menu__checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </li>
+                <li class="restaurant-menu__list-item">
+                    <p class="restaurant-menu__title"><strong>Macaron au chocolat d'exception</strong></p>
+                    <div class="restaurant-menu__content">
+                        <p class="restaurant-menu__description">
+                            Et glace à la vanille de Madagascar
+                        </p>
+                        <p class="restaurant-menu__price">
+                            22€
+                        </p>
+                    </div>
+                    <div class="restaurant-menu__checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </li>
+                <li class="restaurant-menu__list-item">
+                    <p class="restaurant-menu__title"><strong>Mousse au chocolat</strong></p>
+                    <div class="restaurant-menu__content">
+                        <p class="restaurant-menu__description">
+                            Au piment d'Espelette et à la truffe noire
+                        </p>
+                        <p class="restaurant-menu__price">
+                            23€
+                        </p>
+                    </div>
+                    <div class="restaurant-menu__checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="hero__button">Commander</button>
+
+        </section>
         
 
         <footer>

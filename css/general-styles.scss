@@ -1,0 +1,59 @@
+@import 'variables';
+
+.heart-button {
+    position: absolute;
+    z-index: 10;
+    width: 75px;
+    height: 75px;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &__icon {
+        font-size: 22px;
+        // background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: $basic-transition;
+        &--on-hover {
+            position: absolute;
+            font-size: 22px;
+            background: linear-gradient($secondaire-color, $primaire-color);
+            color: transparent;
+            @include background-clip(text);
+            opacity: 0;
+            transition: $basic-transition;
+        }
+    }
+    &:hover {
+        .heart-button__icon {
+            opacity: 0;
+        }
+        .heart-button__icon--on-hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+.hero__button {
+    background: linear-gradient($secondaire-color, $primaire-color);
+    font-family: $police-body;
+    font-weight: 500;
+    font-size: 1rem;
+    border: 0;
+    color: white;
+    min-width: 185px;
+    height: 50px;
+    padding: 0 25px;
+    border-radius: 25px;
+    @include box-shadow
+    margin-top: 15px;
+    cursor: pointer;
+ }
