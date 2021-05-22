@@ -66,9 +66,7 @@
 
 .loader__ring {
   border: 5px solid #F5EDFF;
-  /* Light grey */
   border-top: 5px solid #9356DC;
-  /* Blue */
   border-radius: 50%;
   width: 50px;
   height: 50px;
