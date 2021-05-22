@@ -1,0 +1,95 @@
+@import 'variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+%typography {
+    font-family: $police-body;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 300;
+}
+
+h1, h3 {
+    @extend %typography;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    font-weight: 500;
+}
+h2 {
+    @extend %typography;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+p, a {
+    @extend %typography;
+}
+
+
+
+.restaurants-cards__text {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    strong {
+        font-weight: 600;
+    }
+}
+/*--HEADER----------------------------*/
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 22px 0 12px 0;
+    background-color: white;
+    @include box-shadow;
+}
+
+.logo-container {
+    max-width: 170px;
+    display: flex;
+    align-items: center;
+    img {
+        width: 100%;
+    }
+    &--small {
+        max-width: 100px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+/*-------FOOTER--------------*/
+
+
+footer {
+    background-color: $brand-black;
+    padding: 30px 20px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    &__list-item {
+        width: 100%;
+        color: white;
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+        i {
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+    }
+    a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}

@@ -1,74 +1,6 @@
 @import 'variables';
 
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-%typography {
-    font-family: $police-body;
-    font-size: 1rem;
-    line-height: 1.4rem;
-    font-weight: 300;
-}
-
-h1, h3 {
-    @extend %typography;
-    font-size: 1.5rem;
-    line-height: 1.7rem;
-    font-weight: 500;
-}
-h2 {
-    @extend %typography;
-    font-size: 1.1rem;
-    font-weight: 300;
-    line-height: 1.5rem;
-}
-
-p, a {
-    @extend %typography;
-}
-a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-
-.restaurants-cards__text {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-    strong {
-        font-weight: 600;
-    }
-}
-/*--HEADER----------------------------*/
-
-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 22px 0 12px 0;
-    background-color: white;
-    @include box-shadow;
-}
-
-.logo-container {
-    max-width: 170px;
-    display: flex;
-    align-items: center;
-    img {
-        width: 100%;
-    }
-    &--small {
-        max-width: 100px;
-        img {
-            width: 100%;
-        }
-    }
-}
-
 
 
 /*--HERO----------------------------*/
@@ -217,6 +149,7 @@ header {
             overflow: hidden;
             box-shadow: 0 5px 10px rgba(0,0,0,0.1);
             margin-top: 20px;
+            cursor: pointer;
         }
     }
     &__content {
@@ -224,6 +157,8 @@ header {
         height: 100%;
         position: relative;
         // background-color: white;
+        text-decoration: none;
+        color: $brand-black;
         img {
             display: block;
             width: 100%;
@@ -284,24 +219,3 @@ header {
 }
 
 
-
-footer {
-    background-color: $brand-black;
-    padding: 30px 20px;
-}
-
-.footer-nav {
-    display: flex;
-    flex-wrap: wrap;
-    &__list-item {
-        width: 100%;
-        color: white;
-        padding: 5px 0;
-        display: flex;
-        align-items: center;
-        i {
-            font-size: 0.9rem;
-            margin-right: 10px;
-        }
-    }
-}
