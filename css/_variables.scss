@@ -28,6 +28,9 @@ $basic-transition: ease-in-out 300ms;
 @mixin box-shadow {
     box-shadow: 0 5px 8px rgba($brand-black,0.1);
 }
+@mixin dark-box-shadow {
+    box-shadow: 0 5px 10px rgba($brand-black,0.3);
+}
 
 @mixin background-clip($clip-type) {
     -moz-background-clip: $clip-type;

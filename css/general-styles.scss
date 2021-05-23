@@ -57,10 +57,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include box-shadow
+    @include box-shadow;
     margin-top: 15px;
     cursor: pointer;
+    transition: $basic-transition;
     &:hover {
-        transform: scale(1.1);
+        @include dark-box-shadow;
+        background: linear-gradient(rgba($secondaire-color, 0.6), rgba($primaire-color, 0.6));
+        color: $primaire-color;
     }
  }
