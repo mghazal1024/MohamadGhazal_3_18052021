@@ -45,7 +45,6 @@
     padding: 0;
     &__form {
         width: 100%;
-        // height: 50px;
         background-color: $brand-gris;
         mix-blend-mode: multiply;
         display: flex;
@@ -114,7 +113,7 @@
             justify-content: flex-start;
             padding: 0 35px;
             margin-top: 20px;
-            @include box-shadow
+            @include box-shadow;
             transition: $basic-transition;
             &:hover {
                 background-color: $primaire-color-clair;
@@ -164,7 +163,6 @@
         list-style: none;
         &-item {
             width: 100%;
-            // height: 250px;
             position: relative;
             border-radius: 15px;
             display: flex;
@@ -182,7 +180,6 @@
         width: 100%;
         height: 100%;
         position: relative;
-        // background-color: white;
         text-decoration: none;
         color: $brand-black;
         img {
@@ -212,33 +209,11 @@
 
 @media screen and (min-width:768px) {
 
-    // .fonction {
-    //     padding: 50px;
-    //     &__list {
-    //         flex-direction: row;
-    //         justify-content: space-between;
-    //         &-item {
-    //             width: 30%;
-    //         }
-    //     }
-    // }
     .fonction {
         width: 50%;
         padding: 50px;
         margin: 0 auto;
     }
-
-    // .restaurants-cards {
-    //     padding: 50px;
-    //     &__list {
-    //         flex-direction: row;
-    //         flex-wrap: wrap;
-    //         justify-content: space-between;
-    //         &-item {
-    //             width: 48%;
-    //         }
-    //     }
-    // }
 
     .restaurants-cards {
         width: 50%;
