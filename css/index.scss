@@ -115,6 +115,7 @@
             margin-top: 20px;
             @include box-shadow;
             transition: $basic-transition;
+            cursor: pointer;
             &:hover {
                 background-color: $primaire-color-clair;
                 i {

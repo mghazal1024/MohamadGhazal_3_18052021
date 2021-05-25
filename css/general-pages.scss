@@ -56,10 +56,14 @@
         border-radius: 30px 30px 0 0;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 0 20px;
-        .heart-button {
-            width: 90px;
+        .heart {
+            width: 30px;
             height: 90px;
+            justify-content: flex-end;
+            position: relative;
+            order: 1;
         }
         h1 {
             font-family: $police-titre;

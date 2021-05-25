@@ -40,6 +40,54 @@
     }
 }
 
+.heart {
+    position: absolute;
+    z-index: 10;
+    width: 75px;
+    height: 75px;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__button {
+        width: 25px;
+        height: 25px;
+        position: relative;
+        z-index: 11;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+            .heart__icon {
+                opacity: 0;
+            }
+            .heart__icon--on-hover {
+                opacity: 1;
+            }
+        }
+    }
+    &__icon {
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: $basic-transition;
+        &--on-hover {
+            position: absolute;
+            font-size: 22px;
+            background: linear-gradient($secondaire-color, $primaire-color);
+            color: transparent;
+            @include background-clip(text);
+            opacity: 0;
+            transition: $basic-transition;
+        }
+    }
+}
 
 .hero__button {
     background: linear-gradient($secondaire-color, $primaire-color);
