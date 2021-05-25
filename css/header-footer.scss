@@ -96,3 +96,34 @@ footer {
         text-decoration: underline;
     }
 }
+
+
+
+@media screen and (min-width: 768px) {
+
+    footer {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .footer-nav {
+        width: 100%;
+        flex-wrap: nowrap;
+        padding-top: 20px;
+        &__list-item {
+            width: auto;
+            margin-right: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    footer {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 50px;
+        border-radius: 20px 20px 0 0;
+    }
+
+}
