@@ -231,8 +231,8 @@
   margin-top: 20px;
   -webkit-box-shadow: 0 5px 8px rgba(53, 53, 53, 0.1);
           box-shadow: 0 5px 8px rgba(53, 53, 53, 0.1);
-  -webkit-transition: ease-in-out 300ms;
-  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 350ms;
+  transition: ease-in-out 350ms;
   cursor: pointer;
 }
 
@@ -262,16 +262,16 @@
   color: white;
   background-color: #9356DC;
   border-radius: 12px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
   font-size: 0.9rem;
 }
 
 .fonction i {
   color: #7E7E7E;
   font-size: 19px;
-  -webkit-transition: ease-in-out 300ms;
-  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 350ms;
+  transition: ease-in-out 350ms;
 }
 
 .fonction__titre {
@@ -309,8 +309,8 @@
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   cursor: pointer;
-  -webkit-transition: ease-in-out 300ms;
-  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 350ms;
+  transition: ease-in-out 350ms;
 }
 
 .restaurants-cards__list-item:hover {

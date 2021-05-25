@@ -136,7 +136,7 @@
         color: white;
         background-color: $primaire-color;
         border-radius: 12px;
-        transform: translate(-50%, -50%);
+        transform: translate3d(-50%, -50%, 0);
         font-size: 0.9rem;
     }
     i {

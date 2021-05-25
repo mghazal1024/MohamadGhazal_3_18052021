@@ -21,26 +21,26 @@
 
 @-webkit-keyframes menu-item-animation {
   0% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
 
 @keyframes menu-item-animation {
   0% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
@@ -210,8 +210,8 @@
 }
 
 .restaurant-menu__list-item:hover .restaurant-menu__checkmark {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .restaurant-menu__list-item:hover .restaurant-menu__checkmark i {
@@ -534,8 +534,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: ease-in-out 300ms;
-  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 350ms;
+  transition: ease-in-out 350ms;
 }
 
 .restaurant-menu__description {
@@ -573,10 +573,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: ease-in-out 300ms;
-  transition: ease-in-out 300ms;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+  -webkit-transition: ease-in-out 350ms;
+  transition: ease-in-out 350ms;
 }
 
 .restaurant-menu__checkmark i {
@@ -598,8 +598,8 @@
   font-size: 0.8rem;
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
-  -webkit-transition: ease-in-out 300ms;
-  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 350ms;
+  transition: ease-in-out 350ms;
 }
 
 @media screen and (min-width: 768px) {
