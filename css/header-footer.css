@@ -105,6 +105,11 @@ footer {
           align-items: center;
 }
 
+.footer-nav__list-item a {
+  text-decoration: none;
+  color: white;
+}
+
 .footer-nav__list-item i {
   font-size: 0.9rem;
   margin-right: 10px;
