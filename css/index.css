@@ -332,8 +332,13 @@
   height: 175px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.restaurants-cards__content img.image2 {
+  -o-object-position: 0 60%;
+     object-position: 0 60%;
 }
 
 .restaurants-cards__info {

@@ -56,8 +56,9 @@ header {
     max-width: 170px;
     display: flex;
     align-items: center;
-    img {
-        width: 100%;
+    p {
+        font-family: $police-titre;
+        font-size: 1.8rem;
         padding-top: 10px;
     }
     &--small {
@@ -75,6 +76,14 @@ header {
 footer {
     background-color: $brand-black;
     padding: 30px 20px;
+    .logo-container {
+        p.logo {
+            padding-top: 0;
+            padding-bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .footer-nav {
