@@ -2,14 +2,6 @@
 /*--------TYPOGRAPHY-----------*/
 /*--------ANIMATION-----------------*/
 /*---------MIXIN-----------------------*/
-@-webkit-keyframes page-animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes page-animation {
   0% {
     opacity: 0;
@@ -19,28 +11,13 @@
   }
 }
 
-@-webkit-keyframes menu-item-animation {
-  0% {
-    -webkit-transform: translate3d(0, 20px, 0);
-            transform: translate3d(0, 20px, 0);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
 @keyframes menu-item-animation {
   0% {
-    -webkit-transform: translate3d(0, 20px, 0);
-            transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
@@ -51,15 +28,9 @@
   height: 65px;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
 }
 
@@ -81,10 +52,8 @@
 .hero__image img {
   width: 100%;
   height: 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero .restaurant__heading {
@@ -94,28 +63,18 @@
   background-color: #F6F6F6;
   bottom: 0;
   border-radius: 30px 30px 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 0 20px;
 }
 
 .hero .restaurant__heading .heart {
   width: 30px;
   height: 90px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   position: relative;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
 
 .hero .restaurant__heading h1 {
@@ -127,16 +86,9 @@
 .restaurant-menu {
   background-color: #F6F6F6;
   padding: 0 20px 50px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .restaurant-menu .hero__button {
@@ -147,11 +99,8 @@
   text-transform: uppercase;
   font-size: 1rem;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin-bottom: 20px;
 }
 
@@ -172,13 +121,8 @@
 .restaurant-menu__list {
   list-style: none;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .restaurant-menu__list-item {
@@ -187,22 +131,14 @@
   background-color: white;
   border-radius: 15px;
   padding: 0 20px 0 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   overflow: hidden;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   cursor: pointer;
   margin-bottom: 15px;
-  -webkit-box-shadow: 0 5px 8px rgba(53, 53, 53, 0.1);
-          box-shadow: 0 5px 8px rgba(53, 53, 53, 0.1);
+  box-shadow: 0 5px 8px rgba(53, 53, 53, 0.1);
 }
 
 .restaurant-menu__list-item:hover .restaurant-menu__content {
@@ -210,313 +146,191 @@
 }
 
 .restaurant-menu__list-item:hover .restaurant-menu__checkmark {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .restaurant-menu__list-item:hover .restaurant-menu__checkmark i {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .restaurant-menu__list-item:nth-child(1) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 200ms;
 }
 
 .restaurant-menu__list-item:nth-child(2) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 400ms;
 }
 
 .restaurant-menu__list-item:nth-child(3) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 600ms;
 }
 
 .restaurant-menu__list-item:nth-child(4) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 800ms;
 }
 
 .restaurant-menu__list-item:nth-child(5) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 1000ms;
 }
 
 .restaurant-menu__list-item:nth-child(6) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 1200ms;
 }
 
 .restaurant-menu__list-item:nth-child(7) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 1400ms;
-          animation-delay: 1400ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 1400ms;
 }
 
 .restaurant-menu__list-item:nth-child(8) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 1600ms;
-          animation-delay: 1600ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 1600ms;
 }
 
 .restaurant-menu__list-item:nth-child(9) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 1800ms;
-          animation-delay: 1800ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 1800ms;
 }
 
 .restaurant-menu__list-item:nth-child(10) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 2000ms;
-          animation-delay: 2000ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 2000ms;
 }
 
 .restaurant-menu__list-item:nth-child(11) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 2200ms;
-          animation-delay: 2200ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 2200ms;
 }
 
 .restaurant-menu__list-item:nth-child(12) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 2400ms;
-          animation-delay: 2400ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 2400ms;
 }
 
 .restaurant-menu__list-item:nth-child(13) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 2600ms;
-          animation-delay: 2600ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 2600ms;
 }
 
 .restaurant-menu__list-item:nth-child(14) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 2800ms;
-          animation-delay: 2800ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 2800ms;
 }
 
 .restaurant-menu__list-item:nth-child(15) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 3000ms;
-          animation-delay: 3000ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 3000ms;
 }
 
 .restaurant-menu__list-item:nth-child(16) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 3200ms;
-          animation-delay: 3200ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 3200ms;
 }
 
 .restaurant-menu__list-item:nth-child(17) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 3400ms;
-          animation-delay: 3400ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 3400ms;
 }
 
 .restaurant-menu__list-item:nth-child(18) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 3600ms;
-          animation-delay: 3600ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 3600ms;
 }
 
 .restaurant-menu__list-item:nth-child(19) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 3800ms;
-          animation-delay: 3800ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 3800ms;
 }
 
 .restaurant-menu__list-item:nth-child(20) {
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-name: menu-item-animation;
-          animation-name: menu-item-animation;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 4000ms;
-          animation-delay: 4000ms;
+  animation-duration: 300ms;
+  animation-name: menu-item-animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 4000ms;
 }
 
 .restaurant-menu__title {
@@ -528,13 +342,8 @@
 
 .restaurant-menu__content {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-transition: ease-in-out 350ms;
+  justify-content: space-between;
   transition: ease-in-out 350ms;
 }
 
@@ -548,12 +357,8 @@
 .restaurant-menu__price {
   width: 20%;
   font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .restaurant-menu__checkmark {
@@ -563,18 +368,10 @@
   background-color: #99E2D0;
   top: 0;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: translate3d(100%, 0, 0);
-          transform: translate3d(100%, 0, 0);
-  -webkit-transition: ease-in-out 350ms;
+  justify-content: center;
+  align-items: center;
+  transform: translate3d(100%, 0, 0);
   transition: ease-in-out 350ms;
 }
 
@@ -583,32 +380,20 @@
   height: 20px;
   background-color: white;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-top: 0px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   color: #99E2D0;
   font-size: 0.8rem;
-  -webkit-transform: rotate(-360deg);
-          transform: rotate(-360deg);
-  -webkit-transition: ease-in-out 350ms;
+  transform: rotate(-360deg);
   transition: ease-in-out 350ms;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .hero__image {
     height: 500px;
@@ -644,15 +429,9 @@
   }
   .restaurant-menu__list {
     width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .restaurant-menu__list-item {
     width: 30%;
