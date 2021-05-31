@@ -32,8 +32,12 @@ $basic-transition: ease-in-out 350ms;
     box-shadow: 0 5px 10px rgba($brand-black,0.3);
 }
 
+// @mixin background-clip($clip-type) {
+//     -moz-background-clip: $clip-type;
+//     -webkit-background-clip: $clip-type;
+//     background-clip: $clip-type;
+// }
+
 @mixin background-clip($clip-type) {
-    -moz-background-clip: $clip-type;
-    -webkit-background-clip: $clip-type;
     background-clip: $clip-type;
 }
