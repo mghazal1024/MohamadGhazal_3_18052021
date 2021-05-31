@@ -158,7 +158,6 @@
         transition: $basic-transition;
     }
     &__description {
-        overflow: elipsis;
         width: 80%;
         text-overflow: ellipsis;
         overflow: hidden;
