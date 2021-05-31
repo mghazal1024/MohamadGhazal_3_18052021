@@ -175,6 +175,21 @@
             &:hover {
                 box-shadow: 0 5px 10px rgba(0,0,0,0.5);
             }
+            p.nouveau_tag {
+                position: absolute;
+                z-index: 2;
+                top: 15px;
+                right: 15px;
+                background-color: $tertiaire-color;
+                color: #118766;
+                font-family: $police-body;
+                font-size: 0.9rem;
+                line-height: 0.9rem;
+                font-weight: 400;
+                padding: 8px 12px;
+                border-radius: 2px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            }
         }
     }
     &__content {

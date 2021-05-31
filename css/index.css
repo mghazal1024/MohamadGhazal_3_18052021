@@ -318,6 +318,23 @@
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+.restaurants-cards__list-item p.nouveau_tag {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: #118766;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  font-weight: 400;
+  padding: 8px 12px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
 .restaurants-cards__content {
   width: 100%;
   height: 100%;
