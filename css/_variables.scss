@@ -38,6 +38,6 @@ $basic-transition: ease-in-out 350ms;
 //     background-clip: $clip-type;
 // }
 
-@mixin background-clip($clip-type) {
-    background-clip: $clip-type;
-}
+// @mixin background-clip($clip-type) {
+//     background-clip: $clip-type;
+// }
