@@ -1,44 +1,43 @@
 @import 'variables';
 
-.heart-button {
-    position: absolute;
-    z-index: 10;
-    width: 75px;
-    height: 75px;
-    bottom: 0;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    &__icon {
-        font-size: 22px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 1;
-        transition: $basic-transition;
-        &--on-hover {
-            position: absolute;
-            font-size: 22px;
-            background: linear-gradient($secondaire-color, $primaire-color);
-            color: transparent;
-            // @include background-clip(text);
-            opacity: 0;
-            transition: $basic-transition;
-        }
-    }
-    &:hover {
-        .heart-button__icon {
-            opacity: 0;
-        }
-        .heart-button__icon--on-hover {
-            opacity: 1;
-        }
-    }
-}
+// .heart-button {
+//     position: absolute;
+//     z-index: 10;
+//     width: 75px;
+//     height: 75px;
+//     bottom: 0;
+//     right: 0;
+//     background-color: transparent;
+//     border: none;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     cursor: pointer;
+//     &__icon {
+//         font-size: 22px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         opacity: 1;
+//         transition: $basic-transition;
+//         &--on-hover {
+//             position: absolute;
+//             font-size: 22px;
+//             background: linear-gradient($secondaire-color, $primaire-color);
+//             color: transparent;
+//             opacity: 0;
+//             transition: $basic-transition;
+//         }
+//     }
+//     &:hover {
+//         .heart-button__icon {
+//             opacity: 0;
+//         }
+//         .heart-button__icon--on-hover {
+//             opacity: 1;
+//         }
+//     }
+// }
 
 .heart {
     position: absolute;
@@ -80,10 +79,9 @@
         &--on-hover {
             position: absolute;
             font-size: 22px;
-            background: linear-gradient($secondaire-color, $primaire-color);
-            color: transparent;
-            // @include background-clip(text);
+            // background: linear-gradient($secondaire-color, $primaire-color);
             // background-clip: text;
+            color: $primaire-color;
             opacity: 0;
             transition: $basic-transition;
         }
