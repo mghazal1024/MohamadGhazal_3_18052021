@@ -79,9 +79,11 @@
         &--on-hover {
             position: absolute;
             font-size: 22px;
-            // background: linear-gradient($secondaire-color, $primaire-color);
-            // background-clip: text;
-            color: $primaire-color;
+            background: linear-gradient($secondaire-color, $primaire-color);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            // color: $primaire-color;
             opacity: 0;
             transition: $basic-transition;
         }
