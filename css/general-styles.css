@@ -47,10 +47,7 @@
 .heart__icon--on-hover {
   position: absolute;
   font-size: 22px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #9356DC;
   opacity: 0;
   transition: ease-in-out 350ms;
 }
